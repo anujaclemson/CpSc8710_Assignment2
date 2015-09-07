@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_kDx8EFAQEeWtavM88aF-aw" name="RootElement">
+  <packagedElement xmi:type="uml:Package" xmi:id="_pVE2kFAQEeWtavM88aF-aw" name="CAV">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_5WtuMFAQEeWtavM88aF-aw" name="Turn system on"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_aoOLIFAREeWtavM88aF-aw" name="Turn system off">
+      <include xmi:type="uml:Include" xmi:id="_sOoBIFAREeWtavM88aF-aw" addition="_5WtuMFAQEeWtavM88aF-aw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_qYnqUFAoEeWH-oXNwKlNHA" name="Join the platoon">
+      <include xmi:type="uml:Include" xmi:id="_vHohsFApEeWH-oXNwKlNHA" addition="_5WtuMFAQEeWtavM88aF-aw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_3IB8MFAoEeWH-oXNwKlNHA" name="Leave the platoon">
+      <include xmi:type="uml:Include" xmi:id="_we_WMFApEeWH-oXNwKlNHA" addition="_qYnqUFAoEeWH-oXNwKlNHA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_9M0JIFAoEeWH-oXNwKlNHA" name="Detect obstacles">
+      <include xmi:type="uml:Include" xmi:id="_5lvfUFApEeWH-oXNwKlNHA" addition="_qYnqUFAoEeWH-oXNwKlNHA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_OtsJcFAqEeWH-oXNwKlNHA" name="Adjust speed"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_uMFo0FAQEeWtavM88aF-aw" name="Driver"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_0mEpsFAQEeWtavM88aF-aw" name="System"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_TJ3jMFAREeWtavM88aF-aw" name="Driver turns on the system" memberEnd="_TJ4KQFAREeWtavM88aF-aw _TJ4KQVAREeWtavM88aF-aw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TJ3jMVAREeWtavM88aF-aw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TJ3jMlAREeWtavM88aF-aw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TJ4KQFAREeWtavM88aF-aw" name="driver" type="_uMFo0FAQEeWtavM88aF-aw" association="_TJ3jMFAREeWtavM88aF-aw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TJ4KQVAREeWtavM88aF-aw" name="start the system" type="_5WtuMFAQEeWtavM88aF-aw" association="_TJ3jMFAREeWtavM88aF-aw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_k6fsMFAREeWtavM88aF-aw" name="Driver turns off the system" memberEnd="_k6gTQlAREeWtavM88aF-aw _k6g6UFAREeWtavM88aF-aw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k6gTQFAREeWtavM88aF-aw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_k6gTQVAREeWtavM88aF-aw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_k6gTQlAREeWtavM88aF-aw" name="turn system off" type="_aoOLIFAREeWtavM88aF-aw" association="_k6fsMFAREeWtavM88aF-aw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_k6g6UFAREeWtavM88aF-aw" name="driver" type="_uMFo0FAQEeWtavM88aF-aw" association="_k6fsMFAREeWtavM88aF-aw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_AGAj0FApEeWH-oXNwKlNHA" name="Sensors"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_GXrWMFApEeWH-oXNwKlNHA" name="Joing a group of vehicles" memberEnd="_GXxc0FApEeWH-oXNwKlNHA _GXyD4FApEeWH-oXNwKlNHA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GXuZgFApEeWH-oXNwKlNHA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GXvAkFApEeWH-oXNwKlNHA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_GXxc0FApEeWH-oXNwKlNHA" name="join the platoon" type="_qYnqUFAoEeWH-oXNwKlNHA" association="_GXrWMFApEeWH-oXNwKlNHA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_GXyD4FApEeWH-oXNwKlNHA" name="driver" type="_uMFo0FAQEeWtavM88aF-aw" association="_GXrWMFApEeWH-oXNwKlNHA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_TQNH0FApEeWH-oXNwKlNHA" name="Detecting other vehicles/pedestrians/objects" memberEnd="_TQPkEFApEeWH-oXNwKlNHA _TQPkEVApEeWH-oXNwKlNHA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TQOV8FApEeWH-oXNwKlNHA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TQO9AFApEeWH-oXNwKlNHA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TQPkEFApEeWH-oXNwKlNHA" name="detect obstacles" type="_9M0JIFAoEeWH-oXNwKlNHA" association="_TQNH0FApEeWH-oXNwKlNHA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TQPkEVApEeWH-oXNwKlNHA" name="sensors" type="_AGAj0FApEeWH-oXNwKlNHA" association="_TQNH0FApEeWH-oXNwKlNHA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_dMOFAFApEeWH-oXNwKlNHA" name="Leave the group of vehicles" memberEnd="_dMP6MFApEeWH-oXNwKlNHA _dMP6MVApEeWH-oXNwKlNHA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dMOsEFApEeWH-oXNwKlNHA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dMPTIFApEeWH-oXNwKlNHA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_dMP6MFApEeWH-oXNwKlNHA" name="leave the platoon" type="_3IB8MFAoEeWH-oXNwKlNHA" association="_dMOFAFApEeWH-oXNwKlNHA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_dMP6MVApEeWH-oXNwKlNHA" name="driver" type="_uMFo0FAQEeWtavM88aF-aw" association="_dMOFAFApEeWH-oXNwKlNHA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_VTOTAFAqEeWH-oXNwKlNHA" name="Adjusting vehicle speed" memberEnd="_VTPhIVAqEeWH-oXNwKlNHA _VTQIMFAqEeWH-oXNwKlNHA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VTO6EFAqEeWH-oXNwKlNHA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VTPhIFAqEeWH-oXNwKlNHA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_VTPhIVAqEeWH-oXNwKlNHA" name="adjust speed" type="_OtsJcFAqEeWH-oXNwKlNHA" association="_VTOTAFAqEeWH-oXNwKlNHA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_VTQIMFAqEeWH-oXNwKlNHA" name="driver" type="_uMFo0FAQEeWtavM88aF-aw" association="_VTOTAFAqEeWH-oXNwKlNHA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ZnFU4FAqEeWH-oXNwKlNHA" name="Adjusting vehicle's speed" memberEnd="_ZnHKEVAqEeWH-oXNwKlNHA _ZnHxIFAqEeWH-oXNwKlNHA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZnGjAFAqEeWH-oXNwKlNHA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZnHKEFAqEeWH-oXNwKlNHA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ZnHKEVAqEeWH-oXNwKlNHA" name="system" type="_0mEpsFAQEeWtavM88aF-aw" association="_ZnFU4FAqEeWH-oXNwKlNHA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ZnHxIFAqEeWH-oXNwKlNHA" name="adjust speed" type="_OtsJcFAqEeWH-oXNwKlNHA" association="_ZnFU4FAqEeWH-oXNwKlNHA"/>
+  </packagedElement>
+</uml:Model>
